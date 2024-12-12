@@ -1,9 +1,9 @@
-import LucideErrorIcon from "../icons/lucide-error-icon";
+import ErrorCircle from "../icons/error-circle";
 
 export default function Troubleshooting({ error }: { error: string }) {
   return (
-    <div className="globally-central error-content">
-      <LucideErrorIcon />
+    <div className="globally-central content error">
+      <ErrorCircle />
       <div className="text-lg font-semibold">
         <p className="mt-2 scroll-m-20 text-2xl font-bold tracking-tight">
           Something went wrong...

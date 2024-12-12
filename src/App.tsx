@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Troubleshooting from "./components/contents/Troubleshooting";
 import Repositories from "./components/contents/Repositories";
 import Introducing from "./components/contents/Introducing";
+import Loading from "./components/contents/Loading";
 import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
 
@@ -24,7 +25,7 @@ export default function App() {
       .then(
         (result) => {
           setIsLoaded(true);
-          setIntroducing(result);
+          setIsLoaded(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -53,7 +54,7 @@ export default function App() {
   if (error) {
     return <Troubleshooting error={error} />;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loading />;
   } else {
     return (
       <ThemeProvider
