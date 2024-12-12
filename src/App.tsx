@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { useEffect, useState } from "react";
 
+import Troubleshooting from "./components/contents/Troubleshooting";
 import Repositories from "./components/contents/Repositories";
 import Introducing from "./components/contents/Introducing";
 import Footer from "./components/contents/Footer";
@@ -50,7 +51,7 @@ export default function App() {
   }, []);
 
   if (error) {
-    return <div className="text-lg font-semibold ">{error}</div>;
+    return <Troubleshooting error={error} />;
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
