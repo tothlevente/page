@@ -5,15 +5,7 @@ export default function Introducing({
   avatar_url,
 }: IntroducingProps) {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        width: "700px",
-        margin: "30px",
-        justifySelf: "center",
-      }}
-    >
+    <div className="introducing-content">
       <img
         src={avatar_url}
         alt="Levente"
@@ -21,14 +13,8 @@ export default function Introducing({
         height="250px"
         style={{ borderRadius: "50%" }}
       />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          margin: "20px",
-        }}
-      >
-        <p style={{ fontWeight: "bold" }}>Hi! 👋</p>
+      <div className="introducing-text-content">
+        <p style={{ fontWeight: "bold", fontSize: "26px" }}>Hi! 👋</p>
         <p>My name is Levente.</p>
         <p>{bio}</p>
       </div>
