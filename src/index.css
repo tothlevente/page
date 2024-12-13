@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "JosefinSans";
+  src: url("/src/fonts/JosefinSans.ttf") format("truetype");
+  style: "normal";
+  weight: "100 900";
+}
+
 @layer base {
   :root {
     --background: 240 4.8% 95.9%;
@@ -57,13 +64,6 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-
-@font-face {
-  font-family: "JosefinSans";
-  src: url("/src/fonts/JosefinSansMedium.ttf") format("truetype");
-  style: "normal";
-  weight: "100 900";
 }
 
 @layer base {
