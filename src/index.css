@@ -59,12 +59,22 @@
   }
 }
 
+@font-face {
+  font-family: "JosefinSans";
+  src: url("/src/fonts/JosefinSansMedium.ttf") format("truetype");
+  style: "normal";
+  weight: "100 900";
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "JosefinSans", sans-serif;
+    font-size: medium;
+    line-height: 1.8;
   }
 }
 
