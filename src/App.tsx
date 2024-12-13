@@ -67,8 +67,6 @@ export default function App() {
           bio={introducing?.bio}
           avatar_url={introducing?.avatar_url}
         />
-        <Repositories />
-        <Footer />
       </ThemeProvider>
     );
   }
