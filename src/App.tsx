@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import Troubleshooting from "./components/contents/Troubleshooting";
 import Repositories from "./components/contents/Repositories";
+import IntroducingProps from "./interfaces/IntroducingProps";
 import Introducing from "./components/contents/Introducing";
 import Loading from "./components/contents/Loading";
 import Footer from "./components/contents/Footer";
@@ -12,7 +13,7 @@ export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState<string | null>();
 
-  const [introducing, setIntroducing] = useState([]);
+  const [introducing, setIntroducing] = useState<IntroducingProps>();
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function App() {
       .then(
         (result) => {
           setIsLoaded(true);
-          setIsLoaded(result);
+          setIntroducing(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -62,7 +63,10 @@ export default function App() {
         storageKey="vite-ui-theme"
       >
         <Header />
-        <Introducing />
+        <Introducing
+          bio={introducing?.bio}
+          avatar_url={introducing?.avatar_url}
+        />
         <Repositories />
         <Footer />
       </ThemeProvider>
