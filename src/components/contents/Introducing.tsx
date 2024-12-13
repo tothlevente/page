@@ -1,4 +1,7 @@
 import IntroducingProps from "@/interfaces/IntroducingProps";
+import Github from "../icons/github";
+
+import { Button } from "@/components/ui/button";
 
 export default function Introducing({
   bio,
@@ -17,6 +20,18 @@ export default function Introducing({
         <p style={{ fontWeight: "bold", fontSize: "26px" }}>Hi! 👋</p>
         <p>My name is Levente.</p>
         <p>{bio}</p>
+        <Button
+          asChild
+          style={{ margin: "10px" }}
+        >
+          <a
+            href="https://github.com/tothlevente"
+            target="_blank"
+          >
+            <Github />
+            Visit my GitHub page
+          </a>
+        </Button>
       </div>
     </div>
   );
