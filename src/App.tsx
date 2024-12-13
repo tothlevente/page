@@ -5,6 +5,7 @@ import Troubleshooting from "./components/contents/Troubleshooting";
 import Repositories from "./components/contents/Repositories";
 import IntroducingProps from "./interfaces/IntroducingProps";
 import Introducing from "./components/contents/Introducing";
+import RepositoryProps from "./interfaces/RepositoryProps";
 import Loading from "./components/contents/Loading";
 import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
@@ -14,7 +15,7 @@ export default function App() {
   const [error, setError] = useState<string | null>();
 
   const [introducing, setIntroducing] = useState<IntroducingProps>();
-  const [repositories, setRepositories] = useState([]);
+  const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
 
   useEffect(() => {
     fetch("https://api.github.com/users/tothlevente", {
@@ -66,6 +67,11 @@ export default function App() {
         <Introducing
           bio={introducing?.bio}
           avatar_url={introducing?.avatar_url}
+        />
+        <Repositories
+          repositories={repositories}
+          setIsLoaded={setIsLoaded}
+          setError={setError}
         />
       </ThemeProvider>
     );
