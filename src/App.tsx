@@ -73,6 +73,7 @@ export default function App() {
           setIsLoaded={setIsLoaded}
           setError={setError}
         />
+        <Footer />
       </ThemeProvider>
     );
   }

@@ -1,6 +1,7 @@
 @import url("globally.css");
 @import url("introducing.css");
 @import url("repositories.css");
+@import url("footer.css");
 
 @tailwind base;
 @tailwind components;
