@@ -22,6 +22,8 @@ export default function Repositories({
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "center",
+        maxWidth: "1500px",
+        justifySelf: "center",
       }}
     >
       {repositories.map((item, index) => (
