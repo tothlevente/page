@@ -1,25 +1,14 @@
 .footer {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-a {
   display: grid;
-  justify-items: start;
-  align-items: center;
-  justify-content: start;
   align-content: center;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
-.footer-b {
-  display: grid;
-  justify-items: end;
-  margin: 20px;
-}
-
-.footer-b > a {
-  margin: 2px;
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
 }
