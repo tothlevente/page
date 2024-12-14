@@ -1,5 +1,6 @@
 @import url("globally.css");
 @import url("introducing.css");
+@import url("repositories.css");
 
 @tailwind base;
 @tailwind components;
@@ -16,8 +17,9 @@
   :root {
     --background: 240 4.8% 95.9%;
     --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
+    --card: 20 5.9% 90%;
     --card-foreground: 0 0% 3.9%;
+    --card-border-block-color: 0 0% 89.8%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
@@ -44,8 +46,9 @@
   .dark {
     --background: 240 3.7% 15.9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 9%;
     --card-foreground: 0 0% 98%;
+    --card-border-block-color: 37.7 92.1% 50.2%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;

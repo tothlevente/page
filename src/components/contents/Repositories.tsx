@@ -1,4 +1,7 @@
 import RepositoryProps from "@/interfaces/RepositoryProps";
+import Github from "../icons/github";
+
+import { Button } from "@/components/ui/button";
 
 export default function Repositories({
   repositories,
@@ -23,19 +26,26 @@ export default function Repositories({
       {repositories.map((item, index) => (
         <div
           key={index}
-          style={{ justifyContent: "space-between" }}
-          className="relative flex flex-col mx-2 my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"
+          className="repository-card"
         >
-          <div className="p-4">
-            <h5 style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              {item.name}
-            </h5>
-            <p style={{ maxWidth: "320px" }}>{item.description}</p>
+          <div className="repository-card-header">
+            <p className="repository-card-title">{item.name}</p>
+            <p>{item.description}</p>
           </div>
-          <div className="mx-3 border-t border-slate-200 pb-3 pt-2 px-1">
-            <span className="text-sm text-slate-600 font-medium">
-              Last updated: 4 hours ago
-            </span>
+          <div className="repository-card-footer">
+            <div>
+              <Button
+                asChild
+                className="source-code-button"
+              >
+                <a
+                  href={item.html_url}
+                  target="_blank"
+                >
+                  <Github />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       ))}
