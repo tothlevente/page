@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  background-color: hsl(var(--card));
+  background-color: var(--card);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   scroll-margin-top: 1.5rem;
@@ -34,7 +34,4 @@
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
-}
-
-.source-code-button {
 }

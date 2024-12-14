@@ -1,5 +1,6 @@
 import RepositoryProps from "@/interfaces/RepositoryProps";
 import Github from "../icons/github";
+import Globe from "../icons/globe";
 
 import { Button } from "@/components/ui/button";
 
@@ -34,10 +35,7 @@ export default function Repositories({
           </div>
           <div className="repository-card-footer">
             <div>
-              <Button
-                asChild
-                className="source-code-button"
-              >
+              <Button asChild>
                 <a
                   href={item.html_url}
                   target="_blank"
@@ -45,6 +43,20 @@ export default function Repositories({
                   <Github />
                 </a>
               </Button>
+            </div>
+
+            <div>
+              {item.homepage ? (
+                <Button asChild>
+                  <a
+                    href={item.homepage}
+                    target="_blank"
+                    style={{ marginRight: "8px" }}
+                  >
+                    <Globe />
+                  </a>
+                </Button>
+              ) : null}
             </div>
           </div>
         </div>
