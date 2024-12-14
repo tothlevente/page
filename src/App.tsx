@@ -18,7 +18,7 @@ export default function App() {
   const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/tothlevente", {
+    fetch(import.meta.env.VITE_INTRODUCING_API_PATH, {
       headers: {
         Authorization: `token ${import.meta.env.VITE_TOKEN}`,
       },
@@ -35,7 +35,7 @@ export default function App() {
         }
       );
 
-    fetch("https://api.github.com/users/tothlevente/repos", {
+    fetch(import.meta.env.VITE_REPOSITORIES_API_PATH, {
       headers: {
         Authorization: `token ${import.meta.env.VITE_TOKEN}`,
       },
