@@ -13,6 +13,7 @@ In the project directory, you can run:
 
 ## Used external sources:
 
+- [Jotai](https://jotai.org/)
 - [Shadcn UI](https://ui.shadcn.com/)
 - [Lucide Icons](https://lucide.dev)
 - [Google Fonts](https://fonts.google.com/specimen/Josefin+Sans)
