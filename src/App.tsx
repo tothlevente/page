@@ -6,9 +6,9 @@ import Repositories from "./components/contents/Repositories";
 import IntroducingProps from "./interfaces/IntroducingProps";
 import Introducing from "./components/contents/Introducing";
 import RepositoryProps from "./interfaces/RepositoryProps";
-import Loading from "./components/contents/Loading";
 import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
+import Loading from "./components/loading";
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);

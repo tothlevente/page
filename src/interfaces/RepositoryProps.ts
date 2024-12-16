@@ -8,6 +8,10 @@ export default interface RepositoryProps {
   archived: boolean;
   disabled: boolean;
   is_template: boolean;
+  created_at: string;
+  updated_at: string;
+  language: string;
+  topics: string[];
 }
 
 export interface RepositoriesProps {

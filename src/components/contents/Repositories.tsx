@@ -1,13 +1,15 @@
 import RepositoryProps from "@/interfaces/RepositoryProps";
+import IsTemplate from "../is-template";
+import CreatedAt from "../created-at";
+import UpdatedAt from "../updated-at";
 import Github from "../icons/github";
 import Globe from "../icons/globe";
 
 import { Button } from "@/components/ui/button";
+import Topics from "../topics";
 
 export default function Repositories({
   repositories,
-  setIsLoaded,
-  setError,
 }: {
   repositories: RepositoryProps[];
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
@@ -26,39 +28,46 @@ export default function Repositories({
         justifySelf: "center",
       }}
     >
-      {repositories.map((item, index) => (
+      {repositories.map((value, index) => (
         <div
           key={index}
           className="repository-card"
         >
           <div className="repository-card-header">
-            <p className="repository-card-title">{item.name}</p>
-            <p>{item.description}</p>
+            <p className="repository-card-title">{value.name}</p>
+            <p>{value.description}</p>
           </div>
-          <div className="repository-card-footer">
-            <div>
-              <Button asChild>
-                <a
-                  href={item.html_url}
-                  target="_blank"
-                >
-                  <Github />
-                </a>
-              </Button>
+          <div>
+            <div className="repository-card-badge">
+              <IsTemplate value={value.is_template} />
+              <Topics topics={value.topics} />
             </div>
-
-            <div>
-              {item.homepage ? (
+            <div className="repository-card-items">
+              <div>
+                <CreatedAt value={value.created_at} />
+                <UpdatedAt value={value.updated_at} />
+              </div>
+              <div>
                 <Button asChild>
                   <a
-                    href={item.homepage}
+                    href={value.html_url}
                     target="_blank"
-                    style={{ marginRight: "8px" }}
                   >
-                    <Globe />
+                    <Github />
                   </a>
                 </Button>
-              ) : null}
+                {value.homepage ? (
+                  <Button asChild>
+                    <a
+                      href={value.homepage}
+                      target="_blank"
+                      style={{ marginLeft: "8px" }}
+                    >
+                      <Globe />
+                    </a>
+                  </Button>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>

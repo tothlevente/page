@@ -13,7 +13,7 @@
   scroll-padding-top: 0.75rem;
   scroll-padding-bottom: 0.75rem;
   width: 350px;
-  height: 190px;
+  height: 270px;
   margin: 20px;
   padding: 10px;
 }
@@ -31,7 +31,40 @@
 .repository-card-footer {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.at {
+  font-size: small;
+}
+
+.topics-badge {
+  margin-right: 5px;
+  margin: 2px;
+  background-color: var(--topics-badge-background) !important;
+}
+
+.template-badge {
+  margin-right: 5px;
+  margin: 2px;
+  background-color: var(--template-badge-background) !important;
+}
+
+.repository-card-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+}
+
+.repository-card-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }

@@ -1,4 +1,4 @@
-import LoaderCircle from "../icons/loader-circle";
+import LoaderCircle from "./icons/loader-circle";
 
 export default function Loading() {
   return (
