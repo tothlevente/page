@@ -20,8 +20,8 @@ export default function App() {
       defaultTheme="light"
       storageKey="vite-ui-theme"
     >
-      <Header />
       <ErrorBoundary fallback={<ErrorHandling />}>
+        <Header />
         <Suspense fallback={<Loading />}>
           <Introducing
             bio={bio}
@@ -29,8 +29,8 @@ export default function App() {
           />
           <Repositories repositories={repositories} />
         </Suspense>
+        <Footer />
       </ErrorBoundary>
-      <Footer />
     </ThemeProvider>
   );
 }
