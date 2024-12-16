@@ -1,0 +1,70 @@
+.repository-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--card);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  scroll-margin-top: 1.5rem;
+  scroll-margin-bottom: 1.5rem;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+  border-radius: 10px;
+  scroll-padding-top: 0.75rem;
+  scroll-padding-bottom: 0.75rem;
+  width: 350px;
+  height: 270px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.repository-card-header {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.repository-card-title {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.repository-card-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.at {
+  font-size: small;
+}
+
+.topics-badge {
+  margin-right: 5px;
+  margin: 2px;
+  background-color: var(--topics-badge-background) !important;
+}
+
+.template-badge {
+  margin-right: 5px;
+  margin: 2px;
+  background-color: var(--template-badge-background) !important;
+}
+
+.repository-card-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.repository-card-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}

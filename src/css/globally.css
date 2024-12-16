@@ -1,0 +1,32 @@
+.globally-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.spinner {
+  animation: spin-animation 0.5s infinite;
+  display: inline-block;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
