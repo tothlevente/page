@@ -1,6 +1,6 @@
-import ErrorCircle from "../icons/error-circle";
+import ErrorCircle from "./icons/error-circle";
 
-export default function Troubleshooting({ error }: { error: string }) {
+export default function ErrorHandling() {
   return (
     <div className="globally-central content error">
       <ErrorCircle />
@@ -9,7 +9,6 @@ export default function Troubleshooting({ error }: { error: string }) {
           Something went wrong...
         </p>
         <p>Please refresh the page or come back later.</p>
-        <p className="italic">{error}</p>
         <p>Thank you for your understanding!</p>
       </div>
     </div>

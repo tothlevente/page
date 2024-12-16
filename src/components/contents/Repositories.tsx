@@ -4,18 +4,14 @@ import CreatedAt from "../created-at";
 import UpdatedAt from "../updated-at";
 import Github from "../icons/github";
 import Globe from "../icons/globe";
+import Topics from "../topics";
 
 import { Button } from "@/components/ui/button";
-import Topics from "../topics";
 
 export default function Repositories({
   repositories,
 }: {
   repositories: RepositoryProps[];
-  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
-  setError: React.Dispatch<
-    React.SetStateAction<string | null | undefined>
-  >;
 }) {
   return (
     <div

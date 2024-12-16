@@ -17,6 +17,7 @@ In the project directory, you can run:
 - [Lucide Icons](https://lucide.dev)
 - [Google Fonts](https://fonts.google.com/specimen/Josefin+Sans)
 - [Josefin Sans Font](https://github.com/googlefonts/josefinsans)
+- [React error boundary](https://www.npmjs.com/package/react-error-boundary)
 
 ## License:
 

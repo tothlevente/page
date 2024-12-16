@@ -1,80 +1,36 @@
+import { introducingData, repositoriesData } from "./api/AtomApi";
 import { ThemeProvider } from "@/components/theme-provider";
-import { useEffect, useState } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { Suspense } from "react";
+import { useAtom } from "jotai";
 
-import Troubleshooting from "./components/contents/Troubleshooting";
 import Repositories from "./components/contents/Repositories";
-import IntroducingProps from "./interfaces/IntroducingProps";
 import Introducing from "./components/contents/Introducing";
-import RepositoryProps from "./interfaces/RepositoryProps";
 import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
 import Loading from "./components/loading";
+import ErrorHandling from "./components/error-handling";
 
 export default function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState<string | null>();
+  const [{ bio, avatar_url }] = useAtom(introducingData);
+  const [repositories] = useAtom(repositoriesData);
 
-  const [introducing, setIntroducing] = useState<IntroducingProps>();
-  const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
-
-  useEffect(() => {
-    fetch(import.meta.env.VITE_INTRODUCING_API_PATH, {
-      headers: {
-        Authorization: `token ${import.meta.env.VITE_TOKEN}`,
-      },
-    })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setIntroducing(result);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-
-    fetch(import.meta.env.VITE_REPOSITORIES_API_PATH, {
-      headers: {
-        Authorization: `token ${import.meta.env.VITE_TOKEN}`,
-      },
-    })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setRepositories(result);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
-
-  if (error) {
-    return <Troubleshooting error={error} />;
-  } else if (!isLoaded) {
-    return <Loading />;
-  } else {
-    return (
-      <ThemeProvider
-        defaultTheme="light"
-        storageKey="vite-ui-theme"
-      >
-        <Header />
-        <Introducing
-          bio={introducing?.bio}
-          avatar_url={introducing?.avatar_url}
-        />
-        <Repositories
-          repositories={repositories}
-          setIsLoaded={setIsLoaded}
-          setError={setError}
-        />
-        <Footer />
-      </ThemeProvider>
-    );
-  }
+  return (
+    <ThemeProvider
+      defaultTheme="light"
+      storageKey="vite-ui-theme"
+    >
+      <Header />
+      <ErrorBoundary fallback={<ErrorHandling />}>
+        <Suspense fallback={<Loading />}>
+          <Introducing
+            bio={bio}
+            avatar_url={avatar_url}
+          />
+          <Repositories repositories={repositories} />
+        </Suspense>
+      </ErrorBoundary>
+      <Footer />
+    </ThemeProvider>
+  );
 }
