@@ -6,7 +6,7 @@ export default function Topics({ topics }: { topics: string[] }) {
       {topics.map((value, index) => (
         <Badge
           key={index}
-          className="topics-badge"
+          className="badge topics-badge"
           variant="secondary"
         >
           {value}

@@ -40,16 +40,21 @@
   font-size: small;
 }
 
-.topics-badge {
+.badge {
   margin-right: 5px;
   margin: 2px;
+}
+
+.topics-badge {
   background-color: var(--topics-badge-background) !important;
 }
 
 .template-badge {
-  margin-right: 5px;
-  margin: 2px;
   background-color: var(--template-badge-background) !important;
+}
+
+.archived-badge {
+  background-color: var(--archived-badge-background) !important;
 }
 
 .repository-card-badge {

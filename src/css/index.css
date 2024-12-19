@@ -44,6 +44,7 @@
     --radius: 0.5rem;
     --topics-badge-background: #38bdf8;
     --template-badge-background: #fbbf24;
+    --archived-badge-background: #2dd4bf;
   }
 
   .dark {
@@ -74,6 +75,7 @@
     --chart-5: 340 75% 55%;
     --topics-badge-background: #0369a1;
     --template-badge-background: #d97706;
+    --archived-badge-background: #0d9488;
   }
 }
 
