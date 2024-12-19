@@ -7,6 +7,7 @@ import Globe from "../icons/globe";
 import Topics from "../topics";
 
 import { Button } from "@/components/ui/button";
+import IsArchived from "../is-archived";
 
 export default function Repositories({
   repositories,
@@ -36,6 +37,7 @@ export default function Repositories({
           <div>
             <div className="repository-card-badge">
               <IsTemplate value={value.is_template} />
+              <IsArchived value={value.archived} />
               <Topics topics={value.topics} />
             </div>
             <div className="repository-card-items">
