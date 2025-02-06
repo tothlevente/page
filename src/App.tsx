@@ -4,12 +4,12 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 import { useAtom } from "jotai";
 
-import Repositories from "./components/contents/Repositories";
-import Introducing from "./components/contents/Introducing";
-import Footer from "./components/contents/Footer";
-import Header from "./components/contents/Header";
-import Loading from "./components/loading";
+import Repositories from "./components/layouts/Repositories";
+import Introducing from "./components/layouts/Introducing";
 import ErrorHandling from "./components/error-handling";
+import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
+import Loading from "./components/loading";
 
 export default function App() {
   const [{ bio, avatar_url }] = useAtom(introducingData);
