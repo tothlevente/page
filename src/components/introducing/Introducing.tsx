@@ -1,7 +1,7 @@
 import IntroducingProps from "@/interfaces/IntroducingProps";
-import Github from "../icons/github";
 
 import { Button } from "@/components/ui/button";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
 
 export default function Introducing({
   bio,
@@ -28,7 +28,7 @@ export default function Introducing({
             href="https://github.com/tothlevente"
             target="_blank"
           >
-            <Github />
+            <GitHubIcon />
             Visit my GitHub page
           </a>
         </Button>

@@ -1,4 +1,4 @@
-export default function LoaderCircle() {
+export default function ErrorCircleIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,9 +10,15 @@ export default function LoaderCircle() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-loader-circle spinner"
+      className="lucide lucide-circle-x"
     >
-      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+      />
+      <path d="m15 9-6 6" />
+      <path d="m9 9 6 6" />
     </svg>
   );
 }

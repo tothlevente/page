@@ -1,13 +1,13 @@
 import RepositoryProps from "@/interfaces/RepositoryProps";
-import IsTemplate from "../is-template";
-import CreatedAt from "../created-at";
-import UpdatedAt from "../updated-at";
-import Github from "../icons/github";
-import Globe from "../icons/globe";
-import Topics from "../topics";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
+import GlobeIcon from "@/assets/icons/GlobeIcon";
+import IsTemplate from "./IsTemplate";
+import IsArchived from "./IsArchived";
+import CreatedAt from "./CreatedAt";
+import UpdatedAt from "./UpdatedAt";
+import Topics from "./Topics";
 
 import { Button } from "@/components/ui/button";
-import IsArchived from "../is-archived";
 
 export default function Repositories({
   repositories,
@@ -51,7 +51,7 @@ export default function Repositories({
                     href={value.html_url}
                     target="_blank"
                   >
-                    <Github />
+                    <GitHubIcon />
                   </a>
                 </Button>
                 {value.homepage ? (
@@ -61,7 +61,7 @@ export default function Repositories({
                       target="_blank"
                       style={{ marginLeft: "8px" }}
                     >
-                      <Globe />
+                      <GlobeIcon />
                     </a>
                   </Button>
                 ) : null}

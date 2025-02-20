@@ -1,6 +1,6 @@
-import packageJson from "package.json";
+import ExternalLinkIcon from "@/assets/icons/ExternalLinkIcon";
 
-import ExternalLink from "../icons/external-link";
+import packageJson from "package.json";
 
 import { Button } from "../ui/button";
 
@@ -21,7 +21,7 @@ export default function Footer() {
             target="_blank"
             style={{ marginRight: "8px" }}
           >
-            <ExternalLink />
+            <ExternalLinkIcon />
             Repository
           </a>
         </Button>
@@ -31,7 +31,7 @@ export default function Footer() {
             target="_blank"
             style={{ marginRight: "8px" }}
           >
-            <ExternalLink />
+            <ExternalLinkIcon />
             License
           </a>
         </Button>
