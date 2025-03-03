@@ -1,8 +1,9 @@
 {
   "name": "page",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
+  "repository": "https://github.com/tothlevente/page",
   "scripts": {
     "start": "vite",
     "build": "tsc -b && vite build",

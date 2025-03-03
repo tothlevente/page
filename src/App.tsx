@@ -1,15 +1,15 @@
 import { introducingData, repositoriesData } from "./api/AtomApi";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/themes/ThemeProvider";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 import { useAtom } from "jotai";
 
-import Repositories from "./components/layouts/Repositories";
-import Introducing from "./components/layouts/Introducing";
-import ErrorHandling from "./components/error-handling";
-import Header from "./components/layouts/Header";
-import Footer from "./components/layouts/Footer";
-import Loading from "./components/loading";
+import Repositories from "./components/repositories/Repositories";
+import ErrorHandling from "./components/boundaries/ErrorHandling";
+import Introducing from "./components/introducing/Introducing";
+import Loading from "./components/suspense/Loading";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   const [{ bio, avatar_url }] = useAtom(introducingData);

@@ -1,13 +1,13 @@
 import RepositoryProps from "@/interfaces/RepositoryProps";
-import IsTemplate from "../is-template";
-import CreatedAt from "../created-at";
-import UpdatedAt from "../updated-at";
-import Github from "../icons/github";
-import Globe from "../icons/globe";
-import Topics from "../topics";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
+import GlobeIcon from "@/assets/icons/GlobeIcon";
+import IsTemplate from "./IsTemplate";
+import IsArchived from "./IsArchived";
+import CreatedAt from "./CreatedAt";
+import UpdatedAt from "./UpdatedAt";
+import Topics from "./Topics";
 
 import { Button } from "@/components/ui/button";
-import IsArchived from "../is-archived";
 
 export default function Repositories({
   repositories,
@@ -15,16 +15,7 @@ export default function Repositories({
   repositories: RepositoryProps[];
 }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        maxWidth: "1500px",
-        justifySelf: "center",
-      }}
-    >
+    <div className="flex flex-row flex-wrap justify-center max-w-[1500px] justify-self-center">
       {repositories.map((value, index) => (
         <div
           key={index}
@@ -46,22 +37,28 @@ export default function Repositories({
                 <UpdatedAt value={value.updated_at} />
               </div>
               <div>
-                <Button asChild>
+                <Button
+                  variant="secondary"
+                  asChild
+                >
                   <a
                     href={value.html_url}
                     target="_blank"
                   >
-                    <Github />
+                    <GitHubIcon />
                   </a>
                 </Button>
                 {value.homepage ? (
-                  <Button asChild>
+                  <Button
+                    variant="secondary"
+                    asChild
+                  >
                     <a
                       href={value.homepage}
                       target="_blank"
                       style={{ marginLeft: "8px" }}
                     >
-                      <Globe />
+                      <GlobeIcon />
                     </a>
                   </Button>
                 ) : null}

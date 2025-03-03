@@ -1,12 +1,13 @@
-import IntroducingProps from "@/interfaces/IntroducingProps";
-import Github from "../icons/github";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
 
 import { Button } from "@/components/ui/button";
 
-export default function Introducing({
-  bio,
-  avatar_url,
-}: IntroducingProps) {
+interface Props {
+  bio: string | undefined;
+  avatar_url: string | undefined;
+}
+
+const Introducing = ({ bio, avatar_url }: Props) => {
   return (
     <div className="introducing-content">
       <img
@@ -14,25 +15,28 @@ export default function Introducing({
         alt="Levente"
         width="250px"
         height="250px"
-        style={{ borderRadius: "50%" }}
+        className="rounded-full"
       />
       <div className="introducing-text-content">
-        <p style={{ fontWeight: "bold", fontSize: "26px" }}>Hi! 👋</p>
+        <p className="font-bold text-[26px]">Hi! 👋</p>
         <p>My name is Levente.</p>
         <p>{bio}</p>
         <Button
           asChild
-          style={{ margin: "10px" }}
+          className="m-2.5"
+          variant="outline"
         >
           <a
             href="https://github.com/tothlevente"
             target="_blank"
           >
-            <Github />
+            <GitHubIcon />
             Visit my GitHub page
           </a>
         </Button>
       </div>
     </div>
   );
-}
+};
+
+export default Introducing;
