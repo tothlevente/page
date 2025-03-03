@@ -1,7 +1,6 @@
 @import url("globally.css");
 @import url("introducing.css");
 @import url("repositories.css");
-@import url("footer.css");
 
 @tailwind base;
 @tailwind components;
@@ -48,7 +47,7 @@
   }
 
   .dark {
-    --background: 240 3.7% 15.9%;
+    --background: 0 0% 9%;
     --foreground: 0 0% 98%;
     --card: #404040;
     --card-foreground: 0 0% 98%;

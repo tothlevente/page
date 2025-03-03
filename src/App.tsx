@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { useAtom } from "jotai";
 
 import Repositories from "./components/repositories/Repositories";
-import ErrorHandling from "./components/boundary/ErrorHandling";
+import ErrorHandling from "./components/boundaries/ErrorHandling";
 import Introducing from "./components/introducing/Introducing";
 import Loading from "./components/suspense/Loading";
 import Header from "./components/header/Header";

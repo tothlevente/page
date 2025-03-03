@@ -1,12 +1,12 @@
-import ExternalLinkIcon from "@/assets/icons/ExternalLinkIcon";
+import RepositoryButton from "./RepositoryButton";
+import LicenseButton from "./LicenseButton";
+import NetlifyButton from "./NetlifyButton";
 
 import packageJson from "package.json";
 
-import { Button } from "../ui/button";
-
-export default function Footer() {
+const Footer = () => {
   return (
-    <div className="footer">
+    <div className="grid place-content-center place-items-center text-center mt-[30px]">
       <p>This website is open source and licensed under MIT.</p>
       <p>
         This website is does not use cookies and collect data about you.
@@ -14,38 +14,13 @@ export default function Footer() {
       <p>For more information please visit the project repository.</p>
       <p>Thank you for your visiting and intrest! 👍️</p>
       <p>Created by Levente in 2024 | v{packageJson.version}</p>
-      <div className="footer-link">
-        <Button asChild>
-          <a
-            href="https://github.com/tothlevente/page"
-            target="_blank"
-            style={{ marginRight: "8px" }}
-          >
-            <ExternalLinkIcon />
-            Repository
-          </a>
-        </Button>
-        <Button asChild>
-          <a
-            href="https://github.com/tothlevente/page/blob/main/LICENSE"
-            target="_blank"
-            style={{ marginRight: "8px" }}
-          >
-            <ExternalLinkIcon />
-            License
-          </a>
-        </Button>
+      <div className="flex flex-row p-2.5">
+        <RepositoryButton />
+        <LicenseButton />
       </div>
-      <a
-        href="https://www.netlify.com"
-        target="_blank"
-        style={{ paddingBottom: "10px" }}
-      >
-        <img
-          src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
-          alt="Deploys by Netlify"
-        />
-      </a>
+      <NetlifyButton />
     </div>
   );
-}
+};
+
+export default Footer;

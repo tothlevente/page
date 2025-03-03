@@ -1,16 +1,11 @@
 import { ModeToggle } from "../themes/ModeToggle";
 
-export default function Header() {
+const Header = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        margin: "20px",
-      }}
-    >
+    <div className="flex justify-end items-center m-5">
       <ModeToggle />
     </div>
   );
-}
+};
+
+export default Header;

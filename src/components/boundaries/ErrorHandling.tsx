@@ -1,6 +1,6 @@
 import ErrorCircleIcon from "@/assets/icons/ErrorCircleIcon";
 
-export default function ErrorHandling() {
+const ErrorHandling = () => {
   return (
     <div className="globally-central content error">
       <ErrorCircleIcon />
@@ -13,4 +13,6 @@ export default function ErrorHandling() {
       </div>
     </div>
   );
-}
+};
+
+export default ErrorHandling;
